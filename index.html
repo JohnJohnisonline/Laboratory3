@@ -41,8 +41,7 @@ margin: auto;
 	<script>
 		var mymap = L.map('map').setView([0, 0], 2);
 		var basemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png', {
-			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map 
-			&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		}).addTo(mymap);
 
     // load earthquake GeoJSON from an external file and add it to the map as a layer
@@ -122,6 +121,24 @@ var faultColors = {
 						type: "polyline",
 						color: "#377eb8",
 						weight: 4
+					},
+					{
+						label: "sinistral",
+						type: "polyline",
+						color: "#4daf4a",
+						weight: 4
+					},
+					{
+						label: "Dextral",
+						type: "polyline",
+						color: "#984ea3",
+						weight: 4
+					},
+					{
+						label: "Other",
+						type: "polyline",
+						color: "#ff7f00",
+						weight: 4
 					}
 			]
 		}).addTo(mymap);
@@ -143,6 +160,22 @@ var faultColors = {
 						label: "Between 1 and 2.5",
 						type: "circle",
 						radius: 4,
+						color: "black",
+						fill: true,
+						fillOpacity: "0.6"
+					},
+					{
+						label: "Between 2.5 and 4.5",
+						type: "circle",
+						radius: 6,
+						color: "black",
+						fill: true,
+						fillOpacity: "0.6"
+					},
+					{
+						label: "Over 4.5",
+						type: "circle",
+						radius: 10,
 						color: "black",
 						fill: true,
 						fillOpacity: "0.6"
