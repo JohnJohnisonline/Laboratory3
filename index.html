@@ -33,7 +33,7 @@ margin: auto;
 			<p>The Pacific Northwest lies along the Cascadia fault. Tectonic activity along this fault could cause a catastrophic earthquake that would produce major damage throughout our region. Learn about how researchers at the University of Washington are modelling earthquake risk and preparing for disaster response at the <a href="https://hazards.uw.edu/geology/m9/">M9 Project</a>.</p>
 
 	<!-- link that loads the fault line data from an external file -->
-	<script type="text/javascript" src="data/faults.js">
+	<script type="text/javascript" src="faults.js">
 
 	</script>
 
@@ -41,7 +41,8 @@ margin: auto;
 	<script>
 		var mymap = L.map('map').setView([0, 0], 2);
 		var basemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png', {
-			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map 
+			&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 		}).addTo(mymap);
 
     // load earthquake GeoJSON from an external file and add it to the map as a layer
